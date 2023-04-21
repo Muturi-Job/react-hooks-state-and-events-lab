@@ -8,13 +8,14 @@ function Item({ name, category }) {
   }
 
   const itemClass = inCart ? 'in-cart' : ''; 
+  const buttonText = inCart ? 'Remove from cart' : 'Add to cart';
 
   
   return (
     <li className={itemClass}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add" onClick={handleButton}>Add to Cart</button>
+      <button className="add" onClick={handleButton}>{buttonText}</button>
     </li>
   );
   }
